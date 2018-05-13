@@ -8,7 +8,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -93,11 +92,7 @@ private By coupon_submit=By.xpath("//*[contains(@id,'modfooter')]//*[contains(te
 			System.out.println("Coupon passed");
 	}
 
-	@AfterSuite
-	public void browser_close()
-	{
-		driver.close();                                              //closeing the browser
-	}
+	
 
 
 }
