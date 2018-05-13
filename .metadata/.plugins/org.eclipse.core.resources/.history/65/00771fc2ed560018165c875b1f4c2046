@@ -27,11 +27,12 @@ Login_Page login_page;                                        //calling login me
 private By account_link=By.xpath("//*[contains(@id,'wrapper')]/div[1]/div/div[2]/ul/li[4]/a");
 private By payment_tab=By.xpath("//*[contains(@id,'dashnav')]//*[contains(text(),'Payments')]");
 private By redeem_link=By.partialLinkText("Redeem a");
-private By coupon_textbox=By.cssSelector("input[id='coupon']");
+private By coupon_textbox=By.xpath("//*[@id='coupon']");
+private By coupon_text=By.cssSelector("input[id='coupon']");
 
 private By coupon_box=By.xpath("//*[@id='myModal']//*[@class='modal-body']");
-
-private By coupon_message=By.cssSelector("div[id='coupon_error']");
+private By coupon_message=By.xpath("//*[@id='coupon_error']");
+private By coupon_m=By.cssSelector("div[id='coupon_error']");
 
 private By coupon_submit=By.xpath("//*[contains(@id,'modfooter')]//*[contains(text(),'Submit')]");
 
@@ -79,11 +80,11 @@ private By coupon_submit=By.xpath("//*[contains(@id,'modfooter')]//*[contains(te
 		
 		Thread.sleep(500);                                                //wait till the coupon box load
 		
-		driver.findElement(coupon_textbox).sendKeys("COUPONCODE");        //enter the coupon in coupon text box
+		driver.findElement(coupon_text).sendKeys("COUPONCODE");        //enter the coupon in coupon text box
 		driver.findElement(coupon_submit).click();                        //click on submit button
 		Thread.sleep(500);                                                //wait till the message is displayed
 		
-		if(driver.findElement(coupon_message).getText().contains("invalid"))
+		if(driver.findElement(coupon_m).getText().contains("invalid"))
 		{
 			System.out.println("The coupon you entered failed with the following message");
 			System.out.println(driver.findElement(coupon_message).getText());             //message displayed
