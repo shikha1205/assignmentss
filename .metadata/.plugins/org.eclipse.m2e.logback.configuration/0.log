@@ -1143,3 +1143,11 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: end tag nam
 2018-05-14 01:33:40,686 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sshriva\Desktop\assignment_project\Assignment\src\main\resources
 2018-05-14 01:33:40,687 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
 2018-05-14 01:33:40,687 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sshriva\Desktop\assignment_project\Assignment\src\test\resources
+2018-05-14 01:36:05,803 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-14 01:36:05,805 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sshriva\Desktop\assignment_project\Assignment\src\main\resources
+2018-05-14 01:36:05,806 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-14 01:36:05,806 [Worker-102] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sshriva\Desktop\assignment_project\Assignment\src\test\resources
+2018-05-14 01:36:13,191 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-14 01:36:13,192 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sshriva\Desktop\assignment_project\Assignment\src\main\resources
+2018-05-14 01:36:13,193 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-14 01:36:13,193 [Worker-82] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sshriva\Desktop\assignment_project\Assignment\src\test\resources
