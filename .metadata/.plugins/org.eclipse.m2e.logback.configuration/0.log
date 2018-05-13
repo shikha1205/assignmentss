@@ -1037,3 +1037,13 @@ Caused by: org.codehaus.plexus.util.xml.pull.XmlPullParserException: end tag nam
 2018-05-13 15:23:25,817 [Worker-33] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Imported and configured 0 project(s) in 0 sec
 2018-05-13 15:24:34,897 [Worker-28] INFO  o.e.m.i.launch.MavenLaunchDelegate - C:\Users\sshriva\Desktop\assignment_project\Assignment
 2018-05-13 15:24:34,898 [Worker-28] INFO  o.e.m.i.launch.MavenLaunchDelegate -  mvn  -B test
+2018-05-13 18:26:59,039 [Worker-2] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: assignment_project:assignment:0.0.1-SNAPSHOT @ C:\Users\sshriva\Desktop\assignment_project\Assignment\pom.xml.
+2018-05-13 18:27:06,520 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-13 18:27:06,520 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sshriva\Desktop\assignment_project\Assignment\src\main\resources
+2018-05-13 18:27:06,525 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-13 18:27:06,525 [Worker-2] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sshriva\Desktop\assignment_project\Assignment\src\test\resources
+2018-05-13 18:27:10,036 [Worker-23] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: assignment_project:assignment:0.0.1-SNAPSHOT @ C:\Users\sshriva\Desktop\assignment_project\Assignment\pom.xml.
+2018-05-13 18:27:13,023 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-13 18:27:13,023 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sshriva\Desktop\assignment_project\Assignment\src\main\resources
+2018-05-13 18:27:13,026 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - Using 'UTF-8' encoding to copy filtered resources.
+2018-05-13 18:27:13,027 [Worker-23] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\Users\sshriva\Desktop\assignment_project\Assignment\src\test\resources

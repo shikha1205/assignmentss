@@ -2,28 +2,28 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="20888" started-at="2018-05-13T07:08:46Z" finished-at="2018-05-13T07:09:07Z">
+  <suite name="Default suite" duration-ms="19373" started-at="2018-05-13T12:58:31Z" finished-at="2018-05-13T12:58:50Z">
     <groups>
     </groups>
-    <test name="Test" duration-ms="20888" started-at="2018-05-13T07:08:46Z" finished-at="2018-05-13T07:09:07Z">
+    <test name="Default test" duration-ms="19373" started-at="2018-05-13T12:58:31Z" finished-at="2018-05-13T12:58:50Z">
       <class name="assignment_project.assignment.Redeem_Coupon">
-        <test-method status="PASS" signature="setup()[pri:0, instance:assignment_project.assignment.Redeem_Coupon@7b73b1c8]" name="setup" is-config="true" duration-ms="18623" started-at="2018-05-13T12:38:27Z" finished-at="2018-05-13T12:38:46Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:assignment_project.assignment.Redeem_Coupon@771b3435]" name="setup" is-config="true" duration-ms="13326" started-at="2018-05-13T18:28:17Z" finished-at="2018-05-13T18:28:31Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="login()[pri:0, instance:assignment_project.assignment.Redeem_Coupon@7b73b1c8]" name="login" is-config="true" duration-ms="10379" started-at="2018-05-13T12:38:46Z" finished-at="2018-05-13T12:38:56Z">
+        <test-method status="PASS" signature="login()[pri:0, instance:assignment_project.assignment.Redeem_Coupon@771b3435]" name="login" is-config="true" duration-ms="9312" started-at="2018-05-13T18:28:31Z" finished-at="2018-05-13T18:28:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- login -->
-        <test-method status="PASS" signature="navigate_till_payment()[pri:0, instance:assignment_project.assignment.Redeem_Coupon@7b73b1c8]" name="navigate_till_payment" duration-ms="8647" started-at="2018-05-13T12:38:56Z" finished-at="2018-05-13T12:39:05Z">
+        <test-method status="PASS" signature="navigate_till_payment()[pri:0, instance:assignment_project.assignment.Redeem_Coupon@771b3435]" name="navigate_till_payment" duration-ms="8187" started-at="2018-05-13T18:28:40Z" finished-at="2018-05-13T18:28:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- navigate_till_payment -->
-        <test-method status="PASS" signature="redeem()[pri:0, instance:assignment_project.assignment.Redeem_Coupon@7b73b1c8]" name="redeem" duration-ms="1830" started-at="2018-05-13T12:39:05Z" finished-at="2018-05-13T12:39:07Z">
+        <test-method status="PASS" signature="redeem()[pri:0, instance:assignment_project.assignment.Redeem_Coupon@771b3435]" name="redeem" duration-ms="1850" started-at="2018-05-13T18:28:48Z" finished-at="2018-05-13T18:28:50Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- redeem -->
       </class> <!-- assignment_project.assignment.Redeem_Coupon -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
