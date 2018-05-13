@@ -96,7 +96,7 @@ private By coupon_submit=By.xpath("//*[contains(@id,'modfooter')]//*[contains(te
 	@AfterSuite
 	public void browser_close()
 	{
-		driver.close();                                              //closeing the browser
+		driver.close();
 	}
 
 
