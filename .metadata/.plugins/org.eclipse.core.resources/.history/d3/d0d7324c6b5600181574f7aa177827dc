@@ -1,0 +1,91 @@
+package assignment_project.assignment;
+
+
+import java.util.concurrent.TimeUnit;
+
+
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.seleniumhq.jetty9.util.log.Log;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class Redeem_Coupon {
+	
+	WebDriver driver;
+Login_Page login_page;
+String ab=null;
+
+private By account_link=By.xpath("//*[contains(@id,'wrapper')]/div[1]/div/div[2]/ul/li[4]/a");
+private By payment_tab=By.xpath("//*[contains(@id,'dashnav')]//*[contains(text(),'Payments')]");
+private By redeem_link=By.xpath("//*[@id='container']//*[contains(text(),'Redeem a')]");
+private By coupon_textbox=By.xpath("//*[@id='coupon']");
+private By coupon_box=By.xpath("//*[@id='myModal']//*[@class='modal-body']");
+private By coupon_message=By.xpath("//*[@id='coupon_error']");
+//*[@id='coupon_error']
+
+private By coupon_submit=By.xpath("//*[contains(@id,'modfooter')]//*[contains(text(),'Submit')]");
+
+
+	@BeforeSuite
+	public void setup()
+	{
+		System.setProperty("webdriver.chrome.driver", "C:\\Users\\sshriva\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	driver=new ChromeDriver();
+//	driver=new FirefoxDriver();
+	}
+	
+	@BeforeTest
+	public void login() throws InterruptedException
+	{
+		
+		login_page = new Login_Page(driver);
+		    login_page.setUrl(driver);
+		  login_page.Txbox_username();
+            login_page.setUserName("plivoiview@gmail.com");
+            login_page.setPassword("Plivo@123");
+            login_page.Login_Button().click();
+            
+		
+	    }
+	
+	@Test
+	public void redeem() throws InterruptedException
+	{
+		
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.findElement(account_link).click();
+		driver.findElement(payment_tab).click();
+		
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.findElement(redeem_link).click();
+	
+		
+		Thread.sleep(500);
+		
+		System.out.println(driver.findElement(By.xpath("//*[@id='myModal']//*[@class='modal-body']")).isDisplayed());
+		driver.findElement(coupon_box).click();
+		driver.findElement(coupon_textbox).sendKeys("COUPONCODE");
+		driver.findElement(coupon_submit).click();
+		Thread.sleep(500);
+		driver.findElement(coupon_box).click();
+		
+		ab=driver.findElement(coupon_message).getText();
+		System.out.println(driver.findElement(coupon_message).isDisplayed());
+		System.out.println(driver.findElement(coupon_message).getText());
+		
+		
+	
+	}
+
+	
+
+
+}

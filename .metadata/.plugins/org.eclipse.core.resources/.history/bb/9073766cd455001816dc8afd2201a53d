@@ -1,0 +1,42 @@
+package assignment_project.assignment;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+
+public class Redeem_Coupon {
+	
+	WebDriver driver;
+Login_Page login_page;
+	
+
+	@BeforeSuite
+	public void setup()
+	{
+		/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\sshriva\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	driver=new ChromeDriver();*/
+	driver=new FirefoxDriver();
+	}
+	
+	@BeforeTest
+	public void login() throws InterruptedException
+	{
+		
+		login_page = new Login_Page(driver);
+		    login_page.setUrl(driver);
+		  login_page.Txbox_username();
+            login_page.setUserName("plivoiview@gmail.com");
+            login_page.setPassword("Plivo@123");
+            login_page.Login_Button().click();
+            
+		
+	    }
+	
+	@Test
+	public void 
+	
+
+
+}

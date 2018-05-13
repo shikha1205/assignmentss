@@ -1,0 +1,94 @@
+package assignment_project.assignment;
+
+//imported all the jar files
+
+import java.util.concurrent.TimeUnit;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;         
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+//Using page object model
+
+public class Redeem_Coupon {
+	
+	
+WebDriver driver;
+
+Login_Page login_page;                                        //calling login method
+
+//defining all the web elements
+private By account_link=By.xpath("//*[contains(@id,'wrapper')]/div[1]/div/div[2]/ul/li[4]/a");
+private By payment_tab=By.xpath("//*[contains(@id,'dashnav')]//*[contains(text(),'Payments')]");
+private By redeem_link=By.xpath("//*[@id='container']//*[contains(text(),'Redeem a')]");
+private By coupon_textbox=By.xpath("//*[@id='coupon']");
+private By coupon_box=By.xpath("//*[@id='myModal']//*[@class='modal-body']");
+private By coupon_message=By.xpath("//*[@id='coupon_error']");
+private By coupon_submit=By.xpath("//*[contains(@id,'modfooter')]//*[contains(text(),'Submit')]");
+
+//setting up the browser
+	@BeforeSuite
+	public void setup()
+	{
+		/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\sshriva\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	driver=new ChromeDriver();*/
+	driver=new FirefoxDriver();
+	}
+	
+//logging in before the test needs to be executed 
+	
+	@BeforeTest
+	public void login() throws InterruptedException
+	{
+		
+		login_page = new Login_Page(driver);                           //defining the driver so that its same for both the classes
+		    login_page.setUrl(driver);
+		  login_page.Txbox_username();
+            login_page.setUserName("plivoiview@gmail.com");
+            login_page.setPassword("Plivo@123");
+            login_page.Login_Button().click();
+            
+		
+	    }
+	
+	@Test
+	public void navigate_till_payment()
+	{
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);   //implicit wait
+		driver.findElement(account_link).click();                          //clicking on account tab
+		driver.findElement(payment_tab).click();                           //clicking on payment tab
+		
+		driver.manage().timeouts().implicitlyWait(50, TimeUnit.SECONDS);
+		driver.findElement(redeem_link).click();                          //clicking on redeem coupon link
+	}
+	
+//validating the coupon box
+	@Test
+	public void redeem() throws InterruptedException
+	{
+		
+		Thread.sleep(500);                                                //wait till the coupon box load
+		
+		driver.findElement(coupon_box).click();                           //click on coupon box to stay on that
+		driver.findElement(coupon_textbox).sendKeys("COUPONCODE");        //enter the coupon in coupon text box
+		driver.findElement(coupon_submit).click();                        //click on submit button
+		Thread.sleep(500);                                                //wait till the message is displayed
+		driver.findElement(coupon_box).click();
+		
+		
+		if(driver.findElement(coupon_message).getText().contains("invalid"))
+		{
+			System.out.println("The coupon you entered failed with the following message");
+			System.out.println(driver.findElement(coupon_message).getText());             //message displayed
+		}
+		else
+			System.out.println("Coupon passed");
+	}
+
+	
+
+
+}

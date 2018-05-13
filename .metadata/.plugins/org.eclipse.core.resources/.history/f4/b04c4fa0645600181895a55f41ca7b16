@@ -1,0 +1,86 @@
+package assignment_project.assignment;
+
+import java.awt.AWTException;
+import java.awt.Robot;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.interactions.Action;
+import org.openqa.selenium.interactions.Actions;
+import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Test;
+
+public class Redeem_Coupon {
+	
+	WebDriver driver;
+Login_Page login_page;
+
+private By account_link=By.xpath("//*[contains(@id,'wrapper')]/div[1]/div/div[2]/ul/li[4]/a");
+private By payment_tab=By.xpath("//*[contains(@id,'dashnav')]//*[contains(text(),'Payments')]");
+private By redeem_link=By.xpath("//*[@id='container']//*[contains(text(),'Redeem a')]");
+private By coupon_textbox=By.xpath("//*[contains(@id,'coupon')]");
+private By coupon_box=By.xpath("//*[@id='myModal']//*[@class='modal-body']");
+
+private By coupon_submit=By.xpath("//*[contains(@id,'modfooter')]//*[contains(text(),'Submit')]");
+
+
+	@BeforeSuite
+	public void setup()
+	{
+		/*System.setProperty("webdriver.chrome.driver", "C:\\Users\\sshriva\\Downloads\\chromedriver_win32\\chromedriver.exe");
+	driver=new ChromeDriver();*/
+	driver=new FirefoxDriver();
+	}
+	
+	@BeforeTest
+	public void login() throws InterruptedException
+	{
+		
+		login_page = new Login_Page(driver);
+		    login_page.setUrl(driver);
+		  login_page.Txbox_username();
+            login_page.setUserName("plivoiview@gmail.com");
+            login_page.setPassword("Plivo@123");
+            login_page.Login_Button().click();
+            
+		
+	    }
+	
+	@Test
+	public void redeem() throws InterruptedException, AWTException
+	{
+		Thread.sleep(500);
+		driver.findElement(account_link).click();
+		driver.findElement(payment_tab).click();
+		driver.findElement(redeem_link).click();
+		
+		/*Alert alert = driver.switchTo().alert();
+		alert.sendKeys("abccd");
+		alert.accept();*/
+	//	driver.switchTo().activeElement().findElement(coupon_textbox).sendKeys("COUPONCODE");
+		//driver.switchTo().frame("myModal");
+		/*Actions builder = new Actions(driver);
+        Action mouseOverHome = builder.moveToElement(driver.findElement(By.xpath("//*[@id='myModal']"))).build();*/
+		
+		System.out.println(driver.findElement(By.xpath("//*[@id='myModal']//*[@class='modal-body']")).isDisplayed());
+		driver.findElement(By.xpath("//*[@id='myModal']//*[@class='modal-body']")).click();
+		driver.findElement(By.xpath("//*[@id='coupon']")).sendKeys("COUPONCODE");
+		
+	//	driver.findElement(By.xpath("//*[@id='myModal']//*[@class='modal-body']//input")).sendKeys("abcd");
+		/*Robot r=new Robot();
+		r.*/
+        
+		
+	/*driver.findElement(coupon_textbox).sendKeys("COUPONCODE");
+		driver.findElement(coupon_submit).click();*/
+	}
+
+	
+
+
+}
